@@ -18,7 +18,8 @@ INSTALLED_APPS = [
 ]
 
 CREATED_APPS = [
-    'accounts'
+    'accounts',
+    'laboratory',
 ]
 
 INSTALLED_APPS += CREATED_APPS
@@ -85,5 +86,9 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     ('assets', BASE_DIR / 'frontend/dist/assets')
 ]
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

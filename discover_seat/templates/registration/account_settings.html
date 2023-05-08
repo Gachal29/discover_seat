@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+  <form action="{{request.path}}" method="POST">{% csrf_token %}
+    <div>
+      <label for="last_name">姓</label>
+      <input type="text" id="last_name" name="last_name">
+    </div>
+
+    <div>
+      <label for="first_name">名</label>
+      <input type="text" id="first_name" name="first_name">
+    </div>
+
+    <div>
+      <label for="laboratory">所属研究室</label>
+      <select id="laboratory" name="laboratory">
+        {% for laboratory in laboratories %}
+        <option value="{{laboratory.id}}">{{laboratory.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <button type="submit">設定する</button>
+  </form>
+</main>
+{% endblock %}
