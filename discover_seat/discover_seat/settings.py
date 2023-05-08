@@ -20,6 +20,7 @@ INSTALLED_APPS = [
 CREATED_APPS = [
     'accounts',
     'laboratory',
+    'attendance',
 ]
 
 INSTALLED_APPS += CREATED_APPS
