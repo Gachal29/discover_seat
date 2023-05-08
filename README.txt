@@ -1,0 +1,19 @@
+# setup
+- js/libraryにp5.simpleARをcloneする
+    - `$ cd ./discover_seat/js/library`
+    - `$ git clone git@github.com:tetunori/p5.simpleAR.git`
+    - 空のp5.simpleARディレクトリが残っている場合は削除する
+- stylesのビルド
+    - `$ cd ./frontend`
+    - `$ npm install`
+    - `$ npm run build`
+- Djangoのインストール
+    - `$ python3.9 -m venv venv`
+    - `$ . venv/bin/activate`
+    - `$ pip install -U pip`
+    - `$ pip install -r requirements.txt`
+- runserverの起動
+    - `$ cd ./discover_seat/`
+    - `$ python manage.py migrate`
+    - `$ python manage.py collectstatic`
+    - `$ python manage.py runserver`
