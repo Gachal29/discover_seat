@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<main></main>
+{% endblock %}
+
+{% block footer %}
+<script>
+  const marker_id = "{{seat_position.seat_id}}"
+</script>
+<script src="{% static 'js/library/p5.min.js' %}"></script>
+<script src="{% static 'js/library/p5.simpleAR/dist/v0.6.1/p5SimpleAR.js' %}"></script>
+<script src="{% static 'js/discover_seat.js' %}"></script>
+{% endblock %}

@@ -5,5 +5,6 @@ from .views import TopView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TopView.as_view(), name="top"),
-    path('', include('accounts.urls'))
+    path('', include('accounts.urls')),
+    path('', include('attendance.urls')),
 ]

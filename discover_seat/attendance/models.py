@@ -38,15 +38,11 @@ class Attendance(models.Model):
 
     date = models.DateField(verbose_name="日付", default=timezone.now)
     laboratory = models.ForeignKey(Laboratory, on_delete=models.CASCADE)
-    member = models.JSONField(verbose_name="出席者")
-    seat_position = models.JSONField(verbose_name="座席表")
+    # member = models.JSONField(verbose_name="出席者")
+    # seat_position = models.JSONField(verbose_name="座席表")
 
     class Meta:
         verbose_name = verbose_name_plural = "出席情報"
-
-    def __str__(self):
-        attendance_member_num = len(json.loads(self.attendance_member))
-        return f"{self.date}: {self.laboratory}, 出席{attendance_member_num}人"
     
 
 class SeatPosition(models.Model):
